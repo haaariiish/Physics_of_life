@@ -13,7 +13,7 @@ int main() {
 
 
     World world;
-    world.addEntity(std::make_unique<Particule>(Vec2{100.f, 200.f}, 5.f));
+    world.addEntity(std::make_unique<Particule>(Vec2{300.f, 400.f}, 5.f));
 
     while (window.isOpen()) {
         float dt = clock.restart().asSeconds();

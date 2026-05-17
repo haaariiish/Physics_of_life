@@ -3,7 +3,7 @@
 #include <SFML/Graphics.hpp>
 
 Particule::Particule(Vec2 pos, float lifetime)
-    : Entity("Particule", new Body(pos, 0.001f)), lifetime(lifetime)
+    : Entity("Particule", new Body(pos, 985.0f)), lifetime(lifetime)
 {}
 
 void Particule::update(float dt) {   
@@ -12,7 +12,7 @@ void Particule::update(float dt) {
 }
 
 void Particule::draw(sf::RenderWindow& window) const {
-    sf::CircleShape circle(5.f);
+    sf::CircleShape circle(getBody()->getDimension()*10);
     circle.setFillColor(sf::Color::Cyan);
     Vec2 pos = body->getPosition();
     circle.setPosition({pos.x, pos.y});
