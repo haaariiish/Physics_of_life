@@ -13,6 +13,7 @@ Vec2  Body::getVelocity()  const { return velocity; }
 float Body::getRho()       const { return rho; }
 float Body::getMass()      const { return mass; }
 float Body::getDimension() const { return dimension; }
+float Body::getGamma() const { return gammaAccum; }
 
 void Body::setGamma(float gamma) {
     gammaAccum = gamma;             
@@ -21,6 +22,8 @@ void Body::setGamma(float gamma) {
 void Body::applyForce(Vec2 force) {
     forceAccum = forceAccum + force; 
 }
+
+
 
 void Body::update(float dt) {
     Vec2  F_ext = forceAccum;

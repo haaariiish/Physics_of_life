@@ -20,8 +20,9 @@ public:
     float getRho()       const;
     float getMass()      const;
     float getDimension() const;
+    float getGamma() const;
 
-    void setGamma(float gamma);      // ✅ séparé de applyForce
-    void applyForce(Vec2 force);     // ✅ signature corrigée
+    void setGamma(float gamma);      
+    void applyForce(Vec2 force);     
     void update(float dt);
 };

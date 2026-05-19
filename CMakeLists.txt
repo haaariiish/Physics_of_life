@@ -13,6 +13,7 @@ add_executable(Physics_of_life
     src/physics/World.cpp
     src/entities/Entity.cpp
     src/entities/Particule.cpp
+    src/entities/BallCells.cpp
 )
 
 target_include_directories(Physics_of_life PRIVATE src)

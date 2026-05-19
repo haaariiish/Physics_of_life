@@ -16,6 +16,7 @@ class Entity {
     public:
         Entity(std::string name, Body* body);
         Body* getBody() const;
+        std::string getName() const;
         virtual void update(float dt) = 0;     // virtual = peut être redéfini
         virtual void draw(sf::RenderWindow& window) const = 0;         // virtual = peut être redéfini
         virtual ~Entity() ;       // destructeur virtual OBLIGATOIRE
