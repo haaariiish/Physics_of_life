@@ -58,15 +58,17 @@ int main() {
     cells.push_back(std::unique_ptr<Particule>(p1));
     cells.push_back(std::unique_ptr<Particule>(p2));
     cells.push_back(std::unique_ptr<Particule>(p3));
-    cells.push_back(std::unique_ptr<Particule>(p4));
+    //cells.push_back(std::unique_ptr<Particule>(p4));
 
     std::vector<Spring> springs = {
-        {0, 1, 1.f, 1000000.f}, {1, 2, 0.f, 0.8f},
-        {2, 3, 1.f, 1000000.f}, {3, 0, 0.f, 0.8f},
-        {0, 2, 1.f, 1000000.f}, {1, 3, 0.f, 0.3f},
+        {0, 1, 1.f, 100000.f}, 
+        //{3, 1, 1.f, 100000.f}, 
+        {0, 2, 1.f, 100000.f}
     };
 
-    auto ball = std::make_unique<BallCells>(std::move(cells), std::move(springs), 2.0f, 1e-4f);
+    auto ball = std::make_unique<BallCells>(std::move(cells), std::move(springs), 1.f, 100000.f);
+    ball->buildWaveSequencer();
+    
     world.addLiving(std::move(ball));   // Le World prend possession de l'entité BallCells
 
     // ── 2. On donne AUSSI les mêmes particules individuellement au World ─────
