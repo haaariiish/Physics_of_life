@@ -1,5 +1,6 @@
 # Physics_of_life
-Project in C++ to modelize living being in fluids 
+Project in C++ to modelize living being in fluids \
+Done with the help of Claude Code AI.
 
 
 ```
